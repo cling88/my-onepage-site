@@ -14,11 +14,11 @@ const Skills = ({status}) => {
 
     const skillRef = useRef(null);
 
-    useEffect(() => {
-        if(status){
-            gsap.to(skillRef.current, 0.5, { top: 0, opacity: 1 })
-        } 
-    }, [status])
+    // useEffect(() => {
+    //     if(status){
+    //         gsap.to(skillRef.current, 0.5, { top: 0, opacity: 1 })
+    //     } 
+    // }, [status])
     
     return (
         <div css={SkillsStyle} ref={skillRef}>
@@ -43,7 +43,7 @@ const Skills = ({status}) => {
                     
                     <div className="cont">
                         다양한 플러그인 활용이 가능 합니다. <br />
-                        간단한 인터렉션과 아코디언, 탭 등은 직접 개발이 가능합니다.
+                        간단한 인터렉션과 아코디언, 탭, 배열이나 객체 조작 등 일부 기능은 직접 개발이 가능합니다.
                     </div>
                 </li>
                 <li className="skillItem">
@@ -53,6 +53,7 @@ const Skills = ({status}) => {
                         <Tag text={'꾸준히 공부하고 있어요'} />
                     </div>
                     <div className="cont">
+                        emotion을 통해 스타일을 작성합니다. <br />
                         redux를 통한 상태관리, redux-saga를 통한 API 비동기 처리가 가능합니다. 
                     </div>
                 </li>
@@ -63,11 +64,9 @@ const Skills = ({status}) => {
 
 const SkillsStyle = css`
     position: relative; 
-    top: 100px;
-    opacity: 0;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     .skillItem {
-        margin-bottom: 45px;
+        margin-bottom: 60px;
         .skillItemHead {
             display: flex; 
             align-items: flex-end;

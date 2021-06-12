@@ -6,16 +6,16 @@ import {
   Switch
 } from 'react-router-dom'
 
-import Main from './pages/Main'
-import History from './pages/History'
+import MainPage from './pages/MainPage'
+import HistoryPage from './pages/HistoryPage'
 import NotFound from './pages/NotFound'
 
 function App() {
   return (
     <div className="App">
       <Switch>
-          <Route exact path="/" component={Main} />
-          <Route exact path="/history" component={History} />
+          <Route exact path="/" component={MainPage} />
+          <Route exact path="/history" component={HistoryPage} />
           <Route path="*" component={NotFound}/>
       </Switch>
     </div>

@@ -45,11 +45,11 @@ const AboutMe = () => {
 
 const AboutMeStyle = css`
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     .img {
         position: absolute; 
         top: 20px; 
-        left: -30px;
+        left: -50px;
         width: 450px; 
         img {
             width: 100%;

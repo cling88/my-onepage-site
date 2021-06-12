@@ -22,10 +22,13 @@ const MainText = () => {
             clearInterval(interval);
             gsap.to(textRef.current, 1, { 
                 fontSize: '35px',
+                delay: .8,
+                ease: 'ease-in'
             })
             gsap.to(text2Ref.current, 1, { 
                 opacity: .6,
-                delay: 1
+                delay: 1.2,
+                ease: 'ease-in'
             })
         }
         return () => clearInterval(interval);
@@ -52,13 +55,16 @@ const MainText = () => {
 }
 
 const MainTextStyle = css`
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 50px;
     text-align: right;
-    margin-bottom: 100px;
     .txt1 {
-        position: absolute;
-        top: 50px;
-        right: 30px;
-        z-index: 1;
         font-size: 50px;
         margin-bottom: 15px;    
     }

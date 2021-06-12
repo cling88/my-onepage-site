@@ -8,7 +8,24 @@
     box-sizing: border-box;
 }
 
+body,
+html,
+#root,
+.App {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     background: #000;
-
 }
+
+::selection{background:#69c769;color:#fff;}
+::-moz-selection{background:#69c769;color:#fff;}
+::-webkit-selection{background:#69c769;color:#fff;} 
+
+/* scroll */
+.scroll::-webkit-scrollbar {width: 6px;}
+.scroll::-webkit-scrollbar-track {background: transparent; }
+.scroll::-webkit-scrollbar-thumb {background: #979797; border-radius: 45px;}
+.scroll::-webkit-scrollbar-thumb:hover {background: #979797;}

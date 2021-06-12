@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+body { font-size: 23px; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,7 +21,6 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 23px;
 	vertical-align: baseline;
 	font-family: 'jeju';
 	letter-spacing: -0.03em;
@@ -49,6 +50,7 @@ table {
 /* custom */
 * { letter-spacing: -0.03rem; font-size: inherit; color: inherit; box-sizing: border-box;}
 body {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: auto;}
+body * { font-size: inherit; color: inherit; }
 button { cursor: pointer }
 li { list-style-type: none; } 
 table { border-collapse: collapse; }
