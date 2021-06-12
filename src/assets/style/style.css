@@ -1,0 +1,14 @@
+
+@import url('./font.css');
+@import url('./resets.css');
+
+* {
+    font-family: 'jeju';
+    color: #fff;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+
+}

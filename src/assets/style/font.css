@@ -1,0 +1,21 @@
+
+@font-face {
+    font-family: 'Godo M';
+    src: url('../fonts/godo/GodoM.woff2') format('woff2'),
+        url('../fonts/godo/GodoM.woff') format('woff'),
+        url('../fonts/godo/GodoM.ttf') format('truetype'),
+        url('../fonts/godo/GodoM.svg#GodoM') format('svg');
+        font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'jeju';
+    src: url('../fonts/jeju/JejuGothic.eot') format('woff2'),
+        url('../fonts/jeju/JejuGothic.woff') format('woff'),
+        url('../fonts/jeju/JejuGothic.ttf') format('truetype'),
+        url('../fonts/jeju/JejuGothic.svg#GodoM') format('svg');
+        font-weight: 600;
+    font-style: normal;
+}
+
