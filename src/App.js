@@ -12,7 +12,7 @@ import NotFound from './pages/NotFound'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App scrollX">
       <Switch>
           <Route exact path="/" component={MainPage} />
           <Route exact path="/history" component={HistoryPage} />

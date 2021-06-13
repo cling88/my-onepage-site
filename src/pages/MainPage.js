@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
 import { useEffect, useState, useRef } from 'react';
-
 // lib
 import gsap from 'gsap'
 
@@ -11,6 +10,7 @@ import Skills from '../components/Skills'
 import AboutMe from '../components/AboutMe'
 import History from '../components/History'
 import Footer from '../components/Footer'
+import QuickMenu from '../components/QuickMenu'
 
 function MainPage() {
 
@@ -18,10 +18,8 @@ function MainPage() {
     const skiilsRef = useRef(null);
     const aboutMeRef = useRef(null);
 
-
     // const [SkillsStatus, setSkillsStatus] = useState(false);
     // const [AboutMeStatus, setAboutMeStatus] = useState(false);
-
 
     // const [ScrollY, setScrollY] = useState(0);
     // function handleScroll() { 
@@ -31,7 +29,6 @@ function MainPage() {
     //         setScrollY(window.pageYOffset);
     //     }
     // }
-
 
     // useEffect(() => {
     //     function scrollListener() {  window.addEventListener("scroll", handleScroll); }
@@ -45,12 +42,14 @@ function MainPage() {
         // setTimeout(() => {
         //     setSkillsStatus(true);
         // }, 3000)
+        
     }, [])
 
     return (
         <div css={MainPageStyle}>
-             <MainText />
+            <MainText />
             <div className="mainInner" ref={mainRef}>
+               <QuickMenu />
                <div className="mainScroll scroll">
                 <div className="skillsWrap">
                         <Skills  />
@@ -73,10 +72,10 @@ const MainPageStyle = css`
     height: 100%;
     .mainInner {
         position: relative; 
-        width: 1400px;
-        height: calc(100% - 100px);
-        overflow: hidden;
-        margin: 30px auto;
+        width: 100%;
+        height: calc(100% - 70px);
+        // overflow: hidden;
+        margin: 0 auto 20px;
         padding: 160px 25px 25px 25px;
         background: #000;
         border-radius: 10px;

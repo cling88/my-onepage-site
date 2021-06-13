@@ -1,16 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 // component
 import Figment from './common/Figment'
 import Definition from './common/Definition';
 
 const HistoryBlock = ({ data, type }) => {
-    useEffect(() => {
-        console.log("data: ", data)
-    }, [])
-
     const [Active, setActive] = useState(false);
     return (
         <div 
@@ -77,8 +73,6 @@ const HistoryBlockStyle = css`
     flex-direction: column;
     width: 355px;
     height: 230px;
-    // min-height: 180px;
-    // height: calc(100% - 10px);
     float: left;
     margin-right: 15px;
     cursor: pointer;
@@ -148,7 +142,7 @@ const HistoryBlockStyle = css`
         display: flex; 
         justify-content: flex-end;
         transition: .2s ease-in;
-        // display: none;
+        font-size: 18px;
         &.active {
             right: 0;
         }
@@ -163,14 +157,14 @@ const HistoryBlockStyle = css`
         .historyMoreInner {
             position: relative;
             z-index: 3;
-            background: rgba(40, 40, 203, .95);
-            width: 80%;
+            background: #30957a;
+            width: 90%;
             display: flex; 
             flex-direction: column;
             justify-content: space-between; 
             height: 100%; 
-            padding: 30px 15px; 
-            color: #333;
+            padding: 15px; 
+            color: #fff;
             .moreContent {
                 word-break: keep-all;
                 .workList {
@@ -183,7 +177,7 @@ const HistoryBlockStyle = css`
                 }
                 .content {
                     line-height: 1.3;
-                    max-height: 100px;
+                    max-height: 130px;
                     overflow: hidden;
                     overflow-y: auto;
                 }

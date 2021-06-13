@@ -16,6 +16,14 @@ html,
     overflow: hidden;
 }
 
+.App {
+    position: relative;
+    width: 1400px;
+    margin: 0 auto;
+    padding-top: 80px;
+    overflow-x: auto;
+}
+
 body {
     background: #000;
 }
@@ -29,3 +37,14 @@ body {
 .scroll::-webkit-scrollbar-track {background: transparent; }
 .scroll::-webkit-scrollbar-thumb {background: #979797; border-radius: 45px;}
 .scroll::-webkit-scrollbar-thumb:hover {background: #979797;}
+
+.scrollX::-webkit-scrollbar {height: 6px; }
+.scrollX::-webkit-scrollbar-track {background: transparent; }
+.scrollX::-webkit-scrollbar-thumb {background: #949494; border-radius: 45px;}
+.scrollX::-webkit-scrollbar-thumb:hover {background: #949494;}
+
+.scrollLight::-webkit-scrollbar {width: 6px;}
+.scrollLight::-webkit-scrollbar-track {background: transparent; }
+.scrollLight::-webkit-scrollbar-thumb {background: #ffffff70; border-radius: 45px;}
+.scrollLight::-webkit-scrollbar-thumb:hover {background: #ffffff70;}
+

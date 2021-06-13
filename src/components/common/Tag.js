@@ -1,17 +1,29 @@
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
 
-const Tag = ({ text }) => {
-    return (
-        <span css={TagStyle}>#{ text }</span>
-    )
+const Tag = ({ text, handleFilter }) => {
+    if(handleFilter) {
+        return (
+            <span css={TagStyle(true)} onClick={handleFilter}>#{ text }</span>
+        )
+    } else {
+        return (
+            <span css={TagStyle(false)}>#{ text }</span>
+        )
+    }
+    
 }
 
-const TagStyle = css`
+const TagStyle = (clickable) => css`
     font-size: inherit; 
     color: #30957a;
-    opacity: .6;
+    opacity: .8;
     margin-right: 15px;
+    cursor: ${clickable ? "pointer" : "default"};
+    transition: .3s;
+    &:hover {
+        opacity: 1;
+    }
 `
 
 export default Tag

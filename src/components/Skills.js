@@ -1,24 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
-import { useEffect, useState, useRef } from 'react';
-
-// lib
-import gsap from 'gsap'
+import {useRef } from 'react'
 // component
 import Title from '../components/common/Title'
 import Tag from './common/Tag'
 
-
-
 const Skills = ({status}) => {
 
     const skillRef = useRef(null);
-
-    // useEffect(() => {
-    //     if(status){
-    //         gsap.to(skillRef.current, 0.5, { top: 0, opacity: 1 })
-    //     } 
-    // }, [status])
     
     return (
         <div css={SkillsStyle} ref={skillRef}>

@@ -32,19 +32,7 @@ const MainText = () => {
             })
         }
         return () => clearInterval(interval);
-    })
-    
-
-    useEffect(() => {
-        
-        // gsap.to(textRef.current, 1, { 
-        //     color: 'orange'
-        // })
-        // gsap.to(textRef.current, 1, { 
-        //     transform: 'translatex(0px) translatey(0px)',
-        //     delay: 1
-        // })
-    }, [])
+    });
 
     return (
         <div className="mainTextWrap" css={MainTextStyle}>

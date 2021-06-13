@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
-import { useEffect, useState, useRef } from 'react';
 
 // component
 import Title from './common/Title'
