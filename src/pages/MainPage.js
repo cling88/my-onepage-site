@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 // lib
 import gsap from 'gsap'
 
@@ -15,34 +15,23 @@ import QuickMenu from '../components/QuickMenu'
 function MainPage() {
 
     const mainRef = useRef(null);
+    const mainScrollRef = useRef(null);
     const skiilsRef = useRef(null);
     const aboutMeRef = useRef(null);
+    const historyRef = useRef(null);
 
-    // const [SkillsStatus, setSkillsStatus] = useState(false);
-    // const [AboutMeStatus, setAboutMeStatus] = useState(false);
-
-    // const [ScrollY, setScrollY] = useState(0);
-    // function handleScroll() { 
-    //     if(ScrollY > 299) {
-    //         setScrollY(window.pageYOffset);
-    //     } else {
-    //         setScrollY(window.pageYOffset);
-    //     }
-    // }
-
-    // useEffect(() => {
-    //     function scrollListener() {  window.addEventListener("scroll", handleScroll); }
-    //     scrollListener();
-    //     return () => { window.removeEventListener("scroll", handleScroll); };
-    // });
+    const handleScroll = (e) => {
+        if(e.target.scrollTop > 260) {
+            gsap.to(aboutMeRef.current, 1, {  top: 0, opacity: 1, delay: .1, ease: 'ease-out' });
+        }
+        if(e.target.scrollTop > 800) {
+            gsap.to(historyRef.current, 1, {  top: 0, opacity: 1, delay: .1, ease: 'ease-out' });
+        }
+    }
 
     useEffect(() => {
-        // console.log("skiilsRef: ", skiilsRef.current.offsetTop )
         gsap.to(mainRef.current, 1, {  background: '#1c1d1f', top: 0, opacity: 1, delay: 3, ease: 'ease-out' });
-        // setTimeout(() => {
-        //     setSkillsStatus(true);
-        // }, 3000)
-        
+        gsap.to(skiilsRef.current, 1, {  top: 0, opacity: 1, delay: .5, ease: 'ease-out' });
     }, [])
 
     return (
@@ -50,14 +39,14 @@ function MainPage() {
             <MainText />
             <div className="mainInner" ref={mainRef}>
                <QuickMenu />
-               <div className="mainScroll scroll">
-                <div className="skillsWrap">
+               <div className="mainScroll scroll" ref={mainScrollRef} onScroll={handleScroll}>
+                <div className="skillsWrap" ref={skiilsRef}>
                         <Skills  />
                     </div>
-                    <div className="aboutMeWrap">
+                    <div className="aboutMeWrap" ref={aboutMeRef}>
                         <AboutMe />
                     </div>
-                    <div className="historyWrap">
+                    <div className="historyWrap" ref={historyRef}>
                         <History />
                     </div>
                </div>
@@ -74,7 +63,6 @@ const MainPageStyle = css`
         position: relative; 
         width: 100%;
         height: calc(100% - 70px);
-        // overflow: hidden;
         margin: 0 auto 20px;
         padding: 160px 25px 25px 25px;
         background: #000;
@@ -87,6 +75,22 @@ const MainPageStyle = css`
             overflow: hidden;
             overflow-y: auto;
             padding: 25px;
+        }
+        .skillsWrap {
+            position: relative;
+            top: 200px;
+            opacity: 0;
+            margin-top: 100px;
+        }
+        .aboutMeWrap {
+            position: relative;
+            top: 200px;
+            opacity: 0;
+        }
+        .historyWrap {
+            position: relative;
+            top: 200px;
+            opacity: 0;
         }
     }
 `

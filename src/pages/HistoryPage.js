@@ -25,11 +25,6 @@ function HistoryPage() {
     const historyRef = useRef(null);
 
     useEffect(() => {
-        list && console.log("list: ", list)
-        dateList && console.log("dateList: ", dateList) 
-    }, [list, dateList])
-
-    useEffect(() => {
         dispatch(setList(historyData))
     }, [dispatch])
 

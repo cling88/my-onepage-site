@@ -12,6 +12,7 @@ const HistoryBlock = ({ data, type }) => {
         <div 
             className='historyBlock'
             css={HistoryBlockStyle}
+            style={type==='main' ? {cursor: 'default'}: {cursor: 'pointer'}}
             onClick={() => setActive(!Active)}
         >
             <div className="historySection">
@@ -75,7 +76,6 @@ const HistoryBlockStyle = css`
     height: 230px;
     float: left;
     margin-right: 15px;
-    cursor: pointer;
     padding: 15px;
     background: #111;
     border-radius: 10px;

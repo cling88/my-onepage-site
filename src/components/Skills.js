@@ -16,7 +16,7 @@ const Skills = ({status}) => {
                 <li className="skillItem">
                     <div className="skillItemHead">
                         <h4>HTML&#38;CSS</h4>
-                        <Tag text={'나름 자부심이 있어요'} />
+                        <Tag text={'다양한 활용이 가능해요'} />
                     </div>
                     <div className="cont">
                     반응형, 웹 표준, CSS를 활용한 애니메이션이 가능합니다. <br />
