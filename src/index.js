@@ -16,7 +16,7 @@ const store = createStore(rootReducer, composeWithDevTools());
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename={"/my-onepage-site"}>
       <React.StrictMode>
         <App />
       </React.StrictMode>
