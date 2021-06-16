@@ -310,7 +310,7 @@ export const historyData = {
             ],
             content: () => (
                 <div className="content">
-                    <p>현대자동차 ccsp, 통합 로그인 사이트</p>
+                    <p>SK Btv4.0 추가 개발</p>
                 </div>
             ),
             detail: () => (
