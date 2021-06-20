@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom'
+
 // lib
 import gsap from 'gsap'
 
@@ -11,8 +13,11 @@ import AboutMe from '../components/AboutMe'
 import History from '../components/History'
 import Footer from '../components/Footer'
 import QuickMenu from '../components/QuickMenu'
+import Loading from '../components/Loading'
 
 function MainPage() {
+
+    const [First, setFirst] = useState(false)
 
     const mainRef = useRef(null);
     const mainScrollRef = useRef(null);
@@ -30,28 +35,41 @@ function MainPage() {
     }
 
     useEffect(() => {
-        gsap.to(mainRef.current, 1, {  background: '#1c1d1f', top: 0, opacity: 1, delay: 3, ease: 'ease-out' });
-        gsap.to(skiilsRef.current, 1, {  top: 0, opacity: 1, delay: .5, ease: 'ease-out' });
+        setTimeout(() => {
+            setFirst(true);
+        }, 2200)
     }, [])
+
+    useEffect(() => {
+        if(First) {
+            gsap.to(mainRef.current, 1, {  background: '#1c1d1f', top: 0, opacity: 1, delay: 3, ease: 'ease-out' });
+            gsap.to(skiilsRef.current, 1, {  top: 0, opacity: 1, delay: .5, ease: 'ease-out' });
+        }
+    }, [First])
 
     return (
         <div css={MainPageStyle}>
-            <MainText />
-            <div className="mainInner" ref={mainRef}>
-               <QuickMenu />
-               <div className="mainScroll scroll" ref={mainScrollRef} onScroll={handleScroll}>
-                <div className="skillsWrap" ref={skiilsRef}>
-                        <Skills  />
+            {
+                First ?
+                <>
+                    <MainText />
+                    <div className="mainInner" ref={mainRef}>
+                        <QuickMenu />
+                        <div className="mainScroll scroll" ref={mainScrollRef} onScroll={handleScroll}>
+                            <div className="skillsWrap" ref={skiilsRef}>
+                                <Skills  />
+                            </div>
+                            <div className="aboutMeWrap" ref={aboutMeRef}>
+                                <AboutMe />
+                            </div>
+                            <div className="historyWrap" ref={historyRef}>
+                                <History />
+                            </div>
+                        </div>
                     </div>
-                    <div className="aboutMeWrap" ref={aboutMeRef}>
-                        <AboutMe />
-                    </div>
-                    <div className="historyWrap" ref={historyRef}>
-                        <History />
-                    </div>
-               </div>
-            </div>
-            <Footer/>
+                    <Footer/>
+                </> : <Loading />
+            }
         </div>
     )
 }
