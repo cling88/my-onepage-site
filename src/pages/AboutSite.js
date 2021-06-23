@@ -48,7 +48,7 @@ function AboutSite() {
                             <ul>
                                 <li>- 메인 텍스트 애니메이션 : <a href="https://wazacs.tistory.com/35" rel="noreferrer" target="_blank" title="메인 텍스트 애니메이션">블로그 보기</a></li>
                                 <li>- 스크롤에 따른 애니메이션 : <a href="https://wazacs.tistory.com/28?category=455192" rel="noreferrer" target="_blank" title="스크롤에 따른 애니메이션">블로그 보기</a></li>
-                                <li>- React in Animation  ( 작성중 )</li>
+                                <li>- React in Animation  <a href="https://wazacs.tistory.com/38?category=455192" rel="noreferrer" target="_blank" title="React 에서 애니메이션, 인터렉션 구축하기 ">블로그 보기</a></li>
                                 <li>- Github 배포하기 ( 작성중 )</li>
                             </ul>
                         </div>
