@@ -19,8 +19,9 @@ const Skills = ({status}) => {
                         <Tag text={'다양한 활용이 가능해요'} />
                     </div>
                     <div className="cont">
-                    반응형, 웹 표준, CSS를 활용한 애니메이션이 가능합니다. <br />
-                    대부분의 마크업 개발이 가능합니다.
+                        PC, Mobile, Tablet, DID 등 다양환 화면에서 작업을 하였습니다. <br />
+                        반응형, 웹 표준, CSS를 활용한 애니메이션이 가능합니다. <br />
+                        퍼블리싱을 할 때에는 기획자의 의도, 디자이너의 UI, UX 그리고 데이터 바인딩 시점을 모두 반영하려고 노력합니다.
                     </div>
                 </li>
                 <li className="skillItem">
@@ -29,7 +30,6 @@ const Skills = ({status}) => {
                         <Tag text={'웬만큼 활용할 수 있어요'} /> 
                         <Tag text={'꾸준히 공부하고 있어요'} />
                     </div>
-                    
                     <div className="cont">
                         다양한 플러그인 활용이 가능 합니다. <br />
                         간단한 인터렉션과 아코디언, 탭, 배열이나 객체 조작 등 일부 기능은 직접 개발이 가능합니다.

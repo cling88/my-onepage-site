@@ -12,9 +12,9 @@ const AboutMe = () => {
                 <li className="aboutMeItem">
                     <Title text={"WHO AM I"} />
                     <div className="cont">
-                    html, css, 플러그인 활용하여 퍼블리싱 개발을 합니다. <br />
-                    최근에는 javascript, ReactJS 위주의 프론트엔드를 2년간 프로젝트에 참여하였습니다<div className="br"></div> 
-                    기존 업무방식은 기획자가 표현하려는 UI,UX와 프론트, 백엔드에서 개발하기 적합한 방식을 의논하여 개발하였습니다. 
+                        html, css, 가능한 직접 javascript로 구현을 하고 그 외에는 플러그인 활용하여 퍼블리싱 개발을 합니다. <br />
+                        최근 2년 동안 에는 ReactJS 위주의 프론트엔드 프로젝트에 참여하였습니다 <br />
+                        기존 업무방식은 기획자가 표현하려는 UI,UX와 프론트, 백엔드에서 개발하기 적합한 방식을 의논하여 개발하였습니다. 
                     </div>
                 </li>
                 <li className="aboutMeItem">
