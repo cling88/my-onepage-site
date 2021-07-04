@@ -63,6 +63,7 @@ function AboutSite() {
 const AboutSiteStyle = css`
     position: relative; 
     height: 100%;
+    padding: 0 3%; 
     .aboutInner {
         position: relative; 
         width: 100%;

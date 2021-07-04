@@ -3,7 +3,7 @@ import {css} from '@emotion/react';
 
 function Footer() {
     return (
-        <footer css={FooterStyle}>copyright bt CLINK88</footer>
+        <footer css={FooterStyle}>copyright bt CLING88</footer>
     )
 }
 

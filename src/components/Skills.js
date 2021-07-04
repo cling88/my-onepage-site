@@ -57,10 +57,11 @@ const SkillsStyle = css`
     .skillItem {
         margin-bottom: 60px;
         .skillItemHead {
-            display: flex; 
-            align-items: flex-end;
+            // display: flex; 
+            // align-items: flex-end;
             margin-bottom: 18px;
             h4 {
+                float: left; 
                 margin-right: 30px;
                 font-size: 30px;
             }
@@ -70,7 +71,12 @@ const SkillsStyle = css`
             color: #bdbdbd;
         }
     }
-    
+    @media(max-width: 810px) {
+        .skillItemHead h4 {
+            width: 100%; 
+            margin-bottom: 10px;
+        }
+    }
 `
 
 export default Skills

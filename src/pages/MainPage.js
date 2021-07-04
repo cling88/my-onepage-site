@@ -76,6 +76,8 @@ function MainPage() {
 
 const MainPageStyle = css`
     position: relative; 
+    width: 100%; 
+    padding: 3%; 
     height: 100%;
     .mainInner {
         position: relative; 
@@ -98,7 +100,7 @@ const MainPageStyle = css`
             position: relative;
             top: 200px;
             opacity: 0;
-            margin-top: 100px;
+            margin-top: 30px;
         }
         .aboutMeWrap {
             position: relative;
@@ -109,6 +111,21 @@ const MainPageStyle = css`
             position: relative;
             top: 200px;
             opacity: 0;
+            .historyList {
+                padding-right: 0; 
+            }
+        }
+    }
+
+    
+    @media(max-width: 678px) {
+        .mainInner {
+            padding: 160px 5px 25px 5px;
+        }
+    }
+    @media(max-width: 570px) {
+        .mainInner {
+            padding-top: 22vw;
         }
     }
 `

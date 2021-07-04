@@ -80,7 +80,7 @@ const HistoryStyle= css`
             margin-right: 0;
         }
         .historyMore {
-            width: 100px; 
+            min-width: 100px; 
             height: 100px;
             margin-left: 25px;
             a {
@@ -102,7 +102,6 @@ const HistoryStyle= css`
         }
     }
     .historyBlock {
-        background: rgba();
         margin-right: 10px;
         .historySection {
             height: 100%;
@@ -139,6 +138,29 @@ const HistoryStyle= css`
         &:nth-of-type(6) {
             top: 345px;
             right: 105px;
+        }
+    }
+
+    @media(max-width: 1394px) {
+        .historyList .historyItem {
+            width: 50%;
+            &:nth-child(1) {
+                display: none;
+            }
+            .historyBlock {
+                width: 95%;
+            }
+        }
+    }
+    @media(max-width: 994px) {
+        .historyList .historyItem {
+            width: 100%;
+            &:nth-child(2) {
+                display: none;
+            }
+            .historyBlock {
+                width: 95%;
+            }
         }
     }
     

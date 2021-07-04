@@ -71,6 +71,7 @@ function HistoryPage() {
 const HistoryPageStyle = css`
     position: relative; 
     height: 100%;
+    padding: 0 3%; 
     .historyInner {
         position: relative; 
         top: 300px;
@@ -150,6 +151,39 @@ const HistoryPageStyle = css`
                 }
             }
         }
+    }
+
+    @media(max-width: 1000px) {
+        .historyContainer {
+            margin-left: 0 !important;
+        }
+    }
+    @media(max-width: 624px) {
+        .historyInner {
+            .historyScroll{
+                .historyContainer {
+                    width: calc(100% - 5px);
+                    .dateBlock:before,
+                    .dateBlock:after {
+                        display: none !important; 
+                    }
+                    .yearBlock {
+                        padding-left: 0; 
+                        .dateBlock {
+                            paddin-left: 0;
+                            position: static;
+                            margin-bottom: 10px;
+                            .date {
+                                font-size: 5vw;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+
     }
 `
 

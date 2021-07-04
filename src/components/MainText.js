@@ -44,22 +44,36 @@ const MainText = () => {
 
 const MainTextStyle = css`
     position: absolute;
-    top: 50px;
+    top: 5.2vw;
     left: 50%;
     z-index: 1;
     transform: translateX(-50%);
-    width: 1280px;
+    width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 50px;
     text-align: right;
+    @media(max-width: 678px) {
+        .txt1 {
+            font-size: 5vw !important;   
+        }
+        .txt2 {
+            font-size: 3.2vw !important;  
+        }
+    }
     .txt1 {
+        word-break: keep-all;
+        line-height: 1.1;
         font-size: 50px;
         margin-bottom: 15px;    
     }
     .txt2 {
         opacity: 0;
     }
-    
+    @media(max-width: 570px) {
+        padding: 0 5%;
+        top: 9.6vw;
+    }
 `
 
 export default MainText

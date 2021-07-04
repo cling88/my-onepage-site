@@ -69,8 +69,16 @@ const SearchStyle = css`
         margin-bottom: 30px;
         .tag {
         }
-
     }
+    @media(max-width: 1000px) {
+        padding: 0; 
+        padding-top: 3vw;
+    }
+    @media(max-width: 624px) {
+        padding: 0; 
+        padding-top: 5vw;
+    }
+
 `
 
 export default Sort
