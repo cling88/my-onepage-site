@@ -6,7 +6,7 @@ import gsap from 'gsap'
 
 const MainText = () => {
 
-    const txt = '나는 코딩한다. 고로 나는 존재한다.';
+    const txt = '제 사이트에 오신걸 환영합니다!';
     const [Text, setText] = useState('');
     const [Count, setCount] = useState(0);
     
